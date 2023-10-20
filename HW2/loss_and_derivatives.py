@@ -90,7 +90,7 @@ class LossAndDerivatives:
 
 
         diff = X.dot(w) - Y
-        return 2 /(Y.shape[0]*Y.shape[1]) * X.T.dot(diff)
+        return 2 /(np.prod(Y.shape)) * X.T.dot(diff)
         
 
     @staticmethod
